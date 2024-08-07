@@ -1,6 +1,11 @@
 import { NextResponse } from "next/server";
 import OpenAI from "openai";
 const systemPrompt = 'Welcome to Headstater, your go-to platform for real-time AI-powered technical interview practice. Hello, how can I help you?'
+
+require('dotenv').config();
+
+const api_key = process.env.OPENAI_API_KEY;
+
 export async function POST(req) {
     const openai = new OpenAI();
     const data = await req.json()
