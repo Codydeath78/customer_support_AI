@@ -4,7 +4,7 @@ const systemPrompt = 'Welcome to Headstater, your go-to platform for real-time A
 
 require('dotenv').config();
 
-const api_key = process.env.OPENAI_API_KEY;
+const api_key = process.env.YOUR_API_KEY_HERE;
 
 export async function POST(req) {
     const openai = new OpenAI();
